@@ -5,7 +5,7 @@ import com.acmeflix.team7.domain.enums.Tag;
 
 import java.util.List;
 
-public class ContentCatalog {
+public class ContentCatalog extends BaseModel {
     private String title,plot;
     private List<Genre> genres;
     private List<Language> languages;
