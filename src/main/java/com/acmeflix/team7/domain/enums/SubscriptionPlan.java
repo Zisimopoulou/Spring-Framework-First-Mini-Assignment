@@ -1,4 +1,7 @@
 package com.acmeflix.team7.domain.enums;
 
-public class SubscriptionPlan {
+public enum SubscriptionPlan {
+    BASIC,
+    ADVANCED,
+    PREMIUM;
 }
