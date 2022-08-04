@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class TvShowServiceImpl extends BaseServiceImpl <TvShow> implements TvShowService{
+public class TvShowServiceImpl extends BaseServiceImpl<TvShow> implements TvShowService{
     private final TvShowRepository tvShowRepository;
     public JpaRepository<TvShow, Long> getRepository() {
         return tvShowRepository;
@@ -18,7 +18,6 @@ public class TvShowServiceImpl extends BaseServiceImpl <TvShow> implements TvSho
 
     @Override
     public TvShow findTvShowByTitle(String tvShowTitle) {
-        List<TvShow> tvShows = tvShowRepository.findTvShowByTitle(tvShowTitle);
-        return tvShows.get(0);
+        return tvShowRepository.findTvShowByTitle(tvShowTitle);
     }
 }
