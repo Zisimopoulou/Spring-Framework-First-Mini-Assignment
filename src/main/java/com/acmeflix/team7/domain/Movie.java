@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 @Setter
 @ToString(callSuper = true)
 @SuperBuilder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Movie extends ContentCatalog{
     private BigDecimal duration;
     private String year;

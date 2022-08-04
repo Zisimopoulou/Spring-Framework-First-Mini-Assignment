@@ -6,12 +6,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 @Getter
 @Setter
 @ToString
-@Builder
+@SuperBuilder
 public class Profile extends BaseModel{
     private String name;
     private String country;

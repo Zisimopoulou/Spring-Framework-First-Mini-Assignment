@@ -5,11 +5,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
 @ToString(callSuper = true)
-@Builder
+@SuperBuilder
 public class Cast extends BaseModel{
     private String firstName, lastName;
     private KindOfCast kindOfCast;

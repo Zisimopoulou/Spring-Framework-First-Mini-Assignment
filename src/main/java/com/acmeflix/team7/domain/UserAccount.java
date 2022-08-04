@@ -5,11 +5,12 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.Builder;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 @Getter
 @Setter
-@Builder
+@SuperBuilder
 @ToString
 public class UserAccount extends BaseModel{
     private String username;

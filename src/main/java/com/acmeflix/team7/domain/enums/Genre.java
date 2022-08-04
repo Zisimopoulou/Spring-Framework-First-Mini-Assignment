@@ -8,12 +8,10 @@ public enum Genre {
     ACTION("action"),
     THRILLER("thriller"),
     ROMANTIC("romantic");
-    private String genreName;
-
-
-        Genre (String genre) {
-            this.genreName = genre;
-        }
-
+    private final String genreName;
+    Genre(String genre) {
+        this.genreName = genre;
     }
+
+}
 
