@@ -6,6 +6,6 @@ import lombok.Getter;
 public enum Language {
     greek,
     english,
-    france,
-    germanic;
+    french,
+    german;
 }
