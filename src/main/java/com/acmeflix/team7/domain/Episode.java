@@ -14,6 +14,6 @@ import lombok.ToString;
 @Builder
 public class Episode extends BaseModel{
     private String title;
-    private Date date;
+    private String date;
     private BigDecimal duration;
 }
