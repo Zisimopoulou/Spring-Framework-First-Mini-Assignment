@@ -2,25 +2,31 @@ package com.acmeflix.team7.service;
 
 import com.acmeflix.team7.domain.UserAccount;
 import com.acmeflix.team7.domain.enums.SubscriptionPlan;
-import com.acmeflix.team7.repository.ContentCatalogRepository;
-import lombok.Getter;
-import lombok.Setter;
+import com.acmeflix.team7.repository.UserAccountRepository;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Service;
 
-@Getter
-@Setter
 
+@Service
+@RequiredArgsConstructor
 public class UserAccountServiceImpl extends BaseServiceImpl <UserAccount>implements UserAccountService {
 
-    private final ContentCatalogRepository userAccountServiceRepository;
+    private  UserAccountRepository userAccountRepository;
 
-    public UserAccountServiceImpl(ContentCatalogRepository userAccountServiceRepository) {
-        this.userAccountServiceRepository = userAccountServiceRepository;
-    }
+   // public UserAccountServiceImpl(userAccountRepository userAccountServiceRepository) {
+   //     this.userAccountRepository = userAccountRepository;
+  //  }
 
     @Override
     public JpaRepository<UserAccount, Long> getRepository() {
-        return null;
+        return userAccountRepository;
+    }
+
+    @Override
+    public UserAccount findUserAccountByEmail(String email) {
+        return userAccountRepository.findUserAccountByEmail(email);
     }
 }
 
