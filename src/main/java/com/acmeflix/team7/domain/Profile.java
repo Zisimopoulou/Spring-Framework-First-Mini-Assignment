@@ -5,7 +5,7 @@ public class Profile extends BaseModel{
     private String country;
     private String language;
     private String gender;
-    private MaturialRaingLevel maturialRaingLevel
+    private MaturialRaingLevel maturialRaingLevel;
 
 
 }
