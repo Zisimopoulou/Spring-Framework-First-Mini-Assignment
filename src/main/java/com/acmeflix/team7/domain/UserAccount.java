@@ -15,7 +15,7 @@ public class UserAccount extends BaseModel{
     private String username;
     private String password;
     private String email;
-    private List< Profile >profiles;
+    private List<Profile>profiles;
     private SubscriptionPlan subscriptionPlan;
 
 

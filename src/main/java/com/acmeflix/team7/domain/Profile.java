@@ -1,5 +1,6 @@
 package com.acmeflix.team7.domain;
 
+import com.acmeflix.team7.domain.enums.MaturityRatingLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,6 @@ public class Profile extends BaseModel{
     private String country;
     private String language;
     private String gender;
-    private MaturialRaingLevel maturialRaingLevel;
+    private MaturityRatingLevel maturialRaingLevel;
 
 }
