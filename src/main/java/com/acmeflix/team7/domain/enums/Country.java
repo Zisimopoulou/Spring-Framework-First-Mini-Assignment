@@ -7,20 +7,19 @@ import lombok.Getter;
 
 public enum Country {
     Austria("austria"),
-	German("german"),
-	France("france"),
+    German("german"),
+    France("france"),
     Greece("greece");
 
     private String countryName;
+
     Country(String country) {
         this.countryName = country;
     }
-
-    public String getCountry() {
-        return countryName;
-    }
-
 }
+
+
+
 
 
 
