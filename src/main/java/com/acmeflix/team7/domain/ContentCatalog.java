@@ -14,8 +14,6 @@ import java.util.List;
 @Setter
 @ToString(callSuper = true)
 @SuperBuilder
-@NoArgsConstructor
-@AllArgsConstructor
 public class ContentCatalog extends BaseModel {
     private String title,plot;
     private List<Genre> genres;
