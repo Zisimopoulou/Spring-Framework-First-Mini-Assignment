@@ -2,18 +2,22 @@ package com.acmeflix.team7.service;
 
 import com.acmeflix.team7.domain.Movie;
 import com.acmeflix.team7.repository.MovieRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Service
+@RequiredArgsConstructor
+public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieService{
 
-public interface MovieServiceImpl extends BaseServiceImpl<UserAccount> implements MovieService{
     private final MovieRepository movieRepository;
-    @Override
-    public BaseRepository<Movie, Long> getRepository() {
+    public JpaRepository<Movie, Long> getRepository() {
         return movieRepository;
     }
+
     @Override
-    public Movie findByTitle(final String title) {
-        List<Movie> movies = movieRepository.findByTitle(title);
-        return movies.get(0);
+    public String findMovieByTitle(String movieTitle) {
+        return null;
     }
 }
