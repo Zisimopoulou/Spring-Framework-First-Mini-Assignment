@@ -1,5 +1,7 @@
 package com.acmeflix.team7.service;
 
-public interface TvShowService extends BaseService{
+import com.acmeflix.team7.domain.TvShow;
 
+public interface TvShowService extends BaseService<TvShow> {
+    TvShow findByTitle(String showTitle);
 }
