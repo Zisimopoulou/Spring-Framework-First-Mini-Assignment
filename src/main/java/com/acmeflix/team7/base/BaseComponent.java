@@ -5,7 +5,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Slf4j
-public class BaseComponent {
+public abstract class BaseComponent {
     @PostConstruct
     private void init() {
         log.trace("Loaded {}.", getClass().getName());
