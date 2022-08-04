@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public enum Genre {
-    comedy("comedy"),
-    action("action"),
-    thriller("thriller"),
-    romantic("romantic");
+    COMEDY("comedy"),
+    ACTION("action"),
+    THRILLER("thriller"),
+    ROMANTIC("romantic");
     private String genreName;
 
 
