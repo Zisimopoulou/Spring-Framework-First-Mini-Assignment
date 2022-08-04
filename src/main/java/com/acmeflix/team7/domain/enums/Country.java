@@ -5,19 +5,19 @@ import lombok.Getter;
 
 @Getter
 
-public enum CountryName {
+public enum Country {
     Austria("austria"),
 	German("german"),
 	France("france"),
     Greece("greece");
 
-    private String country;
-    CountryName(String country) {
-        this.country = country;
+    private String countryName;
+    Country(String country) {
+        this.countryName = country;
     }
 
     public String getCountry() {
-        return country;
+        return countryName;
     }
 
 }
