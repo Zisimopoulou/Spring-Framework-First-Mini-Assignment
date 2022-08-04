@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 @RequiredArgsConstructor
-public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieService{
+public class MovieServiceImpl extends BaseServiceImpl <Movie> implements MovieService{
 
     private final MovieRepository movieRepository;
     public JpaRepository<Movie, Long> getRepository() {
@@ -17,7 +17,8 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     }
 
     @Override
-    public String findMovieByTitle(String movieTitle) {
-        return null;
+    public Movie findMovieByTitle(String movieTitle) {
+        List<Movie> movies = movieRepository.findMovieByTitle(movieTitle);
+        return movies.get(0);
     }
 }
