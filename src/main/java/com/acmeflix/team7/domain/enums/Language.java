@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum Language {
-    greek,
-    english,
-    french,
-    german;
+    GREEK,
+    ENGLISH,
+    FRENCH,
+    GERMAN;
 }

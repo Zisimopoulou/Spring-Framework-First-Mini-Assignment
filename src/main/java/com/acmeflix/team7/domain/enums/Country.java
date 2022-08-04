@@ -6,10 +6,10 @@ import lombok.Getter;
 @Getter
 
 public enum Country {
-    Austria("austria"),
-    German("german"),
-    France("france"),
-    Greece("greece");
+    AUSTRIA("Αustria"),
+    GERMAN("German"),
+    FRANCE("France"),
+    GREECE("Greece");
 
     private String countryName;
 
