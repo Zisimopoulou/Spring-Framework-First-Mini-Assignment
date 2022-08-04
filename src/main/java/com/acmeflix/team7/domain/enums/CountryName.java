@@ -5,14 +5,14 @@ import lombok.Getter;
 
 @Getter
 
-public enum Country {
+public enum CountryName {
     Austria("austria"),
 	German("german"),
 	France("france"),
     Greece("greece");
 
     private String country;
-    Country(String country) {
+    CountryName(String country) {
         this.country = country;
     }
 
