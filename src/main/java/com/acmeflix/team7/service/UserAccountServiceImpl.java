@@ -15,10 +15,6 @@ public class UserAccountServiceImpl extends BaseServiceImpl <UserAccount>impleme
 
     private  UserAccountRepository userAccountRepository;
 
-   // public UserAccountServiceImpl(userAccountRepository userAccountServiceRepository) {
-   //     this.userAccountRepository = userAccountRepository;
-  //  }
-
     @Override
     public JpaRepository<UserAccount, Long> getRepository() {
         return userAccountRepository;
