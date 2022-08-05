@@ -60,8 +60,6 @@ public class BasicSampleContentCreator extends BaseComponent implements CommandL
                 Cast.builder().kindOfCast(KindOfCast.ACTOR).lastName("Hutch").lastName("Josh").build()
         ));
         log.info("Title of first movie = {} ",firstMovie.getTitle());
-        //firstMovie.setMovieRecommendations();
-        //firstMovie.setTvShowRecommendations();
 
         log.info("Creating first TVShow.");
         TvShow firstTvShow = TvShow.builder().title("Attorney Woo").country(Country.AUSTRIA).maturityRatingLevel(MaturityRatingLevel.G)
@@ -83,6 +81,9 @@ public class BasicSampleContentCreator extends BaseComponent implements CommandL
         ));
         log.info("Title of first TvShow = {} ",firstTvShow.getTitle());
 
+        firstTvShow.setMovieRecommendations(List.of(firstMovie));
+        log.info("The TvShow = {} has as a recommendation the movie = {} ",firstTvShow.getTitle(),firstTvShow.getMovieRecommendations().get(0).getTitle());
+
         userAccountService.create(firstUserAccount);
         movieService.create(firstMovie);
         tvShowService.create(firstTvShow);
@@ -93,4 +94,11 @@ public class BasicSampleContentCreator extends BaseComponent implements CommandL
         tvShowService.findAll();
 
     }
+
+//    public void movieRecommendation(Movie movie,ContentCatalog contentCatalog){
+//        int count = 0;
+//        while (count < movie.getGenres().size())
+//            ContentCatalogRepositoryImpl.addMovieRecommendation(movieRepositoryImpl.findMovieRecommendation(movie,count),movie,contentCatalog);
+//        count++;
+//    }
 }
