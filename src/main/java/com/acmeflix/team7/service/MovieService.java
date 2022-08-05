@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface MovieService extends BaseService<Movie> {
     Movie findMovieByTitle(List<Movie> movies,String movieTitle);
-    Movie findMovieByGenre(List<Movie> movies,String genreTitle);
-    Movie findMovieRecommendation(Movie movie,int count);
+    public List<Movie> findMovieByGenre(List<Movie> movies,String genreTitle);
+    public List<Movie> findMovieRecommendation(List<Movie> movies, String genreTitle);
 }
