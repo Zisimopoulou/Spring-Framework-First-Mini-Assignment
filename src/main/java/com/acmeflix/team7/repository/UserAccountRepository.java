@@ -1,13 +1,11 @@
 package com.acmeflix.team7.repository;
+
 import com.acmeflix.team7.domain.UserAccount;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
-@Repository
-public interface UserAccountRepository extends JpaRepository<UserAccount, Long> {
-        UserAccount findUserAccountByEmail (final String email);
+public interface UserAccountRepository extends BaseRepository<UserAccount, Long> {
+    List<UserAccount> findUserAccountByEmail(final String email);
 }
 
 

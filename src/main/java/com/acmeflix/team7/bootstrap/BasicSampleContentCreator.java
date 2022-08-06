@@ -9,27 +9,18 @@ import com.acmeflix.team7.service.UserAccountService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
-import lombok.RequiredArgsConstructor;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Component
-@Profile("generate-basic-content")
 @RequiredArgsConstructor
 @Slf4j
 public class BasicSampleContentCreator extends BaseComponent implements CommandLineRunner {
     private final UserAccountService userAccountService;
     private final MovieService movieService;
     private final TvShowService tvShowService;
-
     @Override
     public void run(String... args) throws Exception {
 
@@ -44,7 +35,6 @@ public class BasicSampleContentCreator extends BaseComponent implements CommandL
                 .build();
         log.info("Username of first account = {} ",firstUserAccount.getUsername());
 
-        //Add profiles service
         log.info("Creating first movie.");
         Movie firstMovie = Movie.builder().title("Hunger Games").year("2014").duration(BigDecimal.valueOf(180))
                 .country(Country.AUSTRIA).maturityRatingLevel(MaturityRatingLevel.G).plot("Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games: a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death.")
@@ -94,11 +84,4 @@ public class BasicSampleContentCreator extends BaseComponent implements CommandL
         tvShowService.findAll();
 
     }
-
-//    public void movieRecommendation(Movie movie,ContentCatalog contentCatalog){
-//        int count = 0;
-//        while (count < movie.getGenres().size())
-//            ContentCatalogRepositoryImpl.addMovieRecommendation(movieRepositoryImpl.findMovieRecommendation(movie,count),movie,contentCatalog);
-//        count++;
-//    }
 }
